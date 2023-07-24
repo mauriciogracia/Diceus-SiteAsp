@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace SiteASP.Common
 {
     public class ApiBroker
     {
-        const string _baseUri = "https://localhost:7108/";
+        static string _baseUri = "https://ContactsApi-mgg.azurewebsites.net";// ConfigurationManager.AppSettings["API_URL"]; //"https://localhost:7108/";
         private HttpClient _httpClient;
 
         public static ApiBroker prepare()
