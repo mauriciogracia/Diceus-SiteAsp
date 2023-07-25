@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.6.33829.357
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteASP", "SiteASP\SiteASP.csproj", "{13A4DB5A-4F1B-4743-9FBB-773733B31BD2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteASP.Tests", "SiteASP.Tests\SiteASP.Tests.csproj", "{2C4E7042-1127-4742-8F9B-EE7F7608472F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestModels", "RequestModels\RequestModels.csproj", "{76D747B2-543C-43CB-A9E5-CDB91CFF4009}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{2C4E7042-1127-4742-8F9B-EE7F7608472F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C4E7042-1127-4742-8F9B-EE7F7608472F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C4E7042-1127-4742-8F9B-EE7F7608472F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76D747B2-543C-43CB-A9E5-CDB91CFF4009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76D747B2-543C-43CB-A9E5-CDB91CFF4009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76D747B2-543C-43CB-A9E5-CDB91CFF4009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76D747B2-543C-43CB-A9E5-CDB91CFF4009}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
