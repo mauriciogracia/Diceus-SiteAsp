@@ -266,7 +266,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RequestModels\RequestModels.csproj">
+    <ProjectReference Include="..\RequestModel\RequestModels.csproj">
       <Project>{76d747b2-543c-43cb-a9e5-cdb91cff4009}</Project>
       <Name>RequestModels</Name>
     </ProjectReference>

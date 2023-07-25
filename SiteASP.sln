@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteASP", "SiteASP\SiteASP.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteASP.Tests", "SiteASP.Tests\SiteASP.Tests.csproj", "{2C4E7042-1127-4742-8F9B-EE7F7608472F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestModels", "RequestModels\RequestModels.csproj", "{76D747B2-543C-43CB-A9E5-CDB91CFF4009}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RequestModels", "RequestModel\RequestModels.csproj", "{76D747B2-543C-43CB-A9E5-CDB91CFF4009}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
