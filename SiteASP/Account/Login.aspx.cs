@@ -31,7 +31,7 @@ namespace SiteASP.Account
                 if (isValid)
                 {
                     string token = await api.StartSessionAsync(userName);
-                    string url = ApiBroker._baseUri + "Index?t=" + token;
+                    string url = "https://sitecore-mgg.azurewebsites.net/Index?t=" + token;
                     
                     Response.Redirect(url);
                 }

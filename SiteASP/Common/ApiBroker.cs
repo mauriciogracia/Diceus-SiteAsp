@@ -10,7 +10,7 @@ namespace SiteASP.Common
 {
     public class ApiBroker
     {
-        public static string _baseUri = "https://ContactsApi-mgg.azurewebsites.net/";
+        static string _baseUri = "https://ContactsApi-mgg.azurewebsites.net/";
         private HttpClient _httpClient;
 
         public static ApiBroker prepare()
@@ -64,20 +64,17 @@ namespace SiteASP.Common
             return userCreated;
         }
 
-        public async Task<string> StartSessionAsync(string userId)
+        public async Task<string> StartSessionAsync(string userName)
         {
             string token = string.Empty;
 
-            // Serialize the userId to JSON format
-            var userIdJson = Newtonsoft.Json.JsonConvert.SerializeObject(userId);
-
-            // Create the request content with the serialized userId
-            var content = new StringContent(userIdJson, Encoding.UTF8, "application/json");
-
             try
             {
-                // Send the POST request to the StartSession endpoint
-                var response = await _httpClient.PostAsync("StartSession", content);
+                // Construct the URL for the StartSession endpoint with the userId
+                string startSessionUrl = "api/Users/" + userName + "/StartSession";
+
+                // Send an empty POST request (since we are not sending any data in this case)
+                var response = await _httpClient.PostAsync(startSessionUrl, null);
 
                 // Check if the request was successful (HTTP status code 200-299)
                 if (response.IsSuccessStatusCode)
