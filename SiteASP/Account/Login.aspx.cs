@@ -17,11 +17,6 @@ namespace SiteASP.Account
         protected void Page_Load(object sender, EventArgs e)
         {
             RegisterHyperLink.NavigateUrl = "Register";
-            var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
-            if (!String.IsNullOrEmpty(returnUrl))
-            {
-                RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
-            }
         }
 
         protected async void LogIn(object sender, EventArgs e)
@@ -30,15 +25,14 @@ namespace SiteASP.Account
             {
                 // Validate the user password
                 ApiBroker api = ApiBroker.prepare();
-                bool isValid = await api.ValidateUserAsync(UserName.Text, Password.Text);
+                string userName = UserName.Text ;
+                bool isValid = await api.ValidateUserAsync(userName, Password.Text);
 
                 if (isValid)
                 {
-                    string url = Request.QueryString["ReturnUrl"] ;
+                    string token = await api.StartSessionAsync(userName);
+                    string url = ApiBroker._baseUri + "Index?t=" + token;
                     
-                    if(string.IsNullOrEmpty(url)) {
-                        url = "~/Account/Welcome.html" ;    
-                    }
                     Response.Redirect(url);
                 }
                 else

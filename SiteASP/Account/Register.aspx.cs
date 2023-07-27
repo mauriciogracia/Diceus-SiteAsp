@@ -20,7 +20,7 @@ namespace SiteASP.Account
 
             if(userCreated)
             {
-                string url = "~/Account/Welcome.html";
+                string url = "~/Account/Login";
                 Response.Redirect(url);
             }
             else
